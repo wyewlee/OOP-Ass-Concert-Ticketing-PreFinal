@@ -8,6 +8,6 @@
  *
  * @author Yew Lee
  */
-public class NewClasssssss {
+public class asdasasd {
     
 }
