@@ -1,9 +1,11 @@
-public class Performer extends Person{
+
+public class Performer extends Person {
+
     private String performerId;
     private String managingCompany;
     private static int performerCount = 0;
-    
-    public Performer(){
+
+    public Performer() {
         performerCount++;
     }
 
@@ -12,7 +14,8 @@ public class Performer extends Person{
         performerCount++;
     }
 
-    public Performer(String performerId, String managingCompany, String name, String ic, String gender, String contact) {
+    public Performer(String performerId, String managingCompany, String name,
+            String ic, String gender, String contact) {
         super(name, ic, gender, contact);
         this.performerId = performerId;
         this.managingCompany = managingCompany;
@@ -47,7 +50,5 @@ public class Performer extends Person{
     public String toString() {
         return "Performer{" + "performerId=" + performerId + ", managingCompany=" + managingCompany + '}';
     }
-    
 
-    
 }

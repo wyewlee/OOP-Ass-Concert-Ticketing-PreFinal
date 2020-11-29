@@ -1,7 +1,7 @@
 
 public class Staff extends Person {
 
-    private int staffId;
+    private String staffId;
     private String staffPosition;
     private static int staffCount = 0;
 
@@ -14,7 +14,7 @@ public class Staff extends Person {
         staffCount++;
     }
 
-    public Staff(int staffId, String staffPosition,
+    public Staff(String staffId, String staffPosition,
             String name, String ic, String gender, String contact) {
         super(name, ic, gender, contact);
         this.staffId = staffId;
@@ -22,11 +22,11 @@ public class Staff extends Person {
         staffCount++;
     }
 
-    public int getStaffId() {
+    public String getStaffId() {
         return staffId;
     }
 
-    public void setStaffId(int staffId) {
+    public void setStaffId(String staffId) {
         this.staffId = staffId;
     }
 
