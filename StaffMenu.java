@@ -1,211 +1,176 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author User
- */
 import java.time.LocalTime;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-
 public class StaffMenu {
 
+    static Scanner scan = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
     static Performer performerArr[] = new Performer[99];
+    static Concert concertArr[] = new Concert[10];
+    static Staff staffArr[] = new Staff[99];
+    static int choice = 0;
 
-
-    public static void Menu(){
-
+    public static void menu() {
         System.out.println("1.Add concert ");
         System.out.println("2.Add performer ");
         System.out.println("3.Add staff ");
         System.out.println("4.List ticket sales details ");
         System.out.println("5.Exit\n");
-
-}
-
-    public static void Choice(){
-
-        System.out.print("Do you wish to continue?  1-Yes  2-No  : ");
-
     }
 
+    public static void choice() {
+        System.out.print("Do you wish to continue?  1-Yes  2-No  : ");
+    }
 
+    public static void addConcert() {
 
-    public static void Addconcert(){
+        int empty = ArrCheck.checkArrayNEmpty(concertArr);
+        int endnum = empty + 1;
+        //check which N in array is empty
 
-        Scanner scan = new Scanner(System.in);
-        Concert concertArr[] = new Concert[10];
-        
+        for (int i = empty; i < endnum; i++) {
 
-        for (int i = 0; i < concertArr.length; i++){
+            System.out.println("Welcome to the addConcert Menu\n");
+            System.out.print("Concert Name : ");
+            String n = sc.nextLine();//let user input name
 
-        System.out.print("\nName : ");
-        String name = scan.nextLine();//let user input name
+            System.out.print("Concert Venue : ");
+            String v = sc.nextLine();//let user input venue
 
-        System.out.print("Venue : ");
-        String venue = scan.nextLine();//let user input venue
+            System.out.print("Concert Date(DD-MON-YYYY) : ");
+            String d = sc.nextLine();//let user input venue
 
-        Concert concert = new Concert(name, venue);
-        
+            System.out.print("Concert Time (HH:MM PM/AM): ");
+            String t = sc.nextLine();//let user input venue
+
+            concertArr[i] = new Concert(n, v, d, t);
+        }
 
         System.out.println("========================Concert Details=========================");
-        System.out.println(concert);
- 
+        for (int i = 0; i < endnum; i++) {
+            System.out.println(concertArr[i].toString());
+        }
+    }
 
+    public static void addPerformer() {
+        int empty = ArrCheck.checkArrayNEmpty(performerArr);
+        int endnum = empty + 1;
+        //check which N in array is empty
+
+        for (int i = empty; i < endnum; i++) {
+            System.out.print("\nName : ");
+            String name = scan.nextLine();//let user input name
+
+            System.out.print("IC No : ");
+            String ic = scan.nextLine();//let user input ic no
+
+            System.out.print("Gender : ");
+            String gender = scan.nextLine();//let user input gender
+
+            System.out.print("Contact No : ");
+            String contact = scan.nextLine();//let user input contact number
+
+            System.out.print("Performer ID : ");
+            String id = scan.nextLine();//let user input contact number
+
+            System.out.print("Managing Company: ");
+            String managingCompany = scan.nextLine();//let user input company
+
+            performerArr[i] = new Performer(id, managingCompany,
+                    name, ic, gender, contact);
         }
 
-}
-
-    public static void Addperformer(){
-
-        Scanner scan = new Scanner(System.in);
-     
-        Performer performerArr[] = new Performer[99];
-
- 
-        for (int i = 0; i < performerArr.length; i++){
-
-        System.out.print("\nName : ");
-        String name = scan.nextLine();//let user input name
-
-        System.out.print("IC No : ");
-        String ic = scan.nextLine();//let user input ic no
-
-        System.out.print("Gender : ");
-        String gender = scan.nextLine();//let user input gender
-
-        System.out.print("Contact No : ");
-        String contact = scan.nextLine();//let user input contact number
-
-        Person person = new Person(name, ic, gender, contact);
-
-        System.out.print("Managing Company: ");
-        String managingCompany = scan.nextLine();//let user input company
-
-        Performer performer = new Performer(name, ic, gender, contact, managingCompany);
-        
-        System.out.println("");
         System.out.println("========================Performer Details=========================");
-        System.out.println(person +""+ performer);
- 
-
+        for (int i = 0; i < endnum; i++) {
+            System.out.println(performerArr[i].toString());
         }
+    }
 
+    public static void addStaff() {
 
+        int empty = ArrCheck.checkArrayNEmpty(staffArr);
+        int endnum = empty + 1;
+        //check which N in array is empty
 
+        for (int i = empty; i < endnum; i++) {
+            System.out.print("\nStaff ID : ");
+            String id = scan.nextLine();//let user input name
 
+            System.out.print("Staff Position ： ");
+            String position = scan.nextLine();
+
+            System.out.print("\nName : ");
+            String name = scan.nextLine();//let user input name
+
+            System.out.print("IC No : ");
+            String ic = scan.nextLine();//let user input ic no
+
+            System.out.print("Gender : ");
+            String gender = scan.nextLine();
+
+            System.out.print("Contact No : ");
+            String contact = scan.nextLine();
+
+            staffArr[i] = new Staff(id, position, name, ic, gender, contact);
         }
-
-
-    public static void addStaff(){
-
-        Scanner scan = new Scanner(System.in);
-        Staff []staffArr = new Staff[99];
-        int choice;
-
-
-        for (int i = 0; i < staffArr.length; i++){
-
-        System.out.print("\nName : ");
-        String name = scan.nextLine();//let user input name
-
-        System.out.print("IC No : ");
-        String ic = scan.nextLine();//let user input ic no
-
-        System.out.print("Gender : ");
-        String gender = scan.nextLine();
-
-        System.out.print("Contact No : ");
-        String contact = scan.nextLine();
-
-        Person person = new Person(name, ic, gender, contact);
-        
-
-        System.out.print("Staff Position ： ");
-        String position = scan.nextLine();
-        
-        Staff staff = new Staff(name, ic, gender, contact, position );
-
-        System.out.println("");
         System.out.println("========================Staff Details=========================");
-        System.out.println(person +" "+ staff);
-        
-
-
+        for (int i = 0; i < endnum; i++) {
+            System.out.println(staffArr[i].toString());
         }
+    }
 
-
-
-
-        }
-
-
-
-
-
-
-    public static void ticketSales(){
+    public static void ticketSales() {
 
     }
 
-    public static void Localdt(){
-
+    public static void localDt() { //print time and date
         LocalDate mydate = LocalDate.now();
         LocalTime mytime = LocalTime.now();
         System.out.println("Welcome User, the date for today is " + mydate + " and the time now is " + mytime);
-
     }
 
-
-
-    public static void Staffmenumain(){
-
-        Scanner scan = new Scanner(System.in);
-
-        int selection;
-        int choice;
-        
-        Localdt();
-
-        Menu();
-
-        do{
+    public static void staffMainMenu() {
+        int selection = 0;
+        int choice = 0;
+        while (selection != 5) {
+            localDt(); //printLocalTime
+            menu(); //print menu
             System.out.print("Please enter your selection according to the menu number (1 - 5):  ");
             selection = scan.nextInt();
-            System.out.println();
 
-            if (selection == 1){
-                do{
-                Addconcert();
-                Choice();
-                choice = scan.nextInt();
-                }while (choice != 2);
-            }else if (selection == 2){
-                do{
-                Addperformer();
-                Choice();
-                choice = scan.nextInt();
-                }while (choice != 2);
-            }else if (selection == 3){
-                do{
-                addStaff();
-                Choice();
-                choice = scan.nextInt();
-                }while (choice != 2);
-            }else if (selection == 4){
-                ticketSales();
-            }else if (selection == 5){
-                System.out.println("Goodbye");
-            }else if (selection > 5){
-                System.out.println("Invalid selection");
+            switch (selection) {
+                case 1:
+                    while (choice != 2) {
+                        addConcert();
+                        choice();
+                        choice = scan.nextInt();
+                    }
+                    break;
+                case 2:
+                    while (choice != 2) {
+                        addPerformer();
+                        choice();
+                        choice = scan.nextInt();
+                    }
+                    break;
+                case 3:
+                    while (choice != 2) {
+                        addStaff();
+                        choice();
+                        choice = scan.nextInt();
+                    }
+                    break;
+                case 4:
+                    ticketSales();
+                    break;
+                case 5:
+                    System.out.println("Goodbye");
+                    break;
+                default:
+                    System.out.println("Invalid selection");
+                    break;
             }
-
-         }while (selection > 5);
+        }
+    }
 }
-}
-

@@ -6,12 +6,12 @@ public class TestProg {
         Ticket tickArr2[] = new Ticket[3];
         FoodAndBeverage fnbArr[] = new FoodAndBeverage[4];
         Concert conArr[] = new Concert[2];
-        Staff staffArr[] = new Staff[2];
+        Staff staffArr[] = new Staff[3];
         Performer perfoArr[] = new Performer[2];
         Customer custoArr[] = new Customer[2];
 
-        conArr[0] = new Concert("Axiata Arena Bukit Jalil", "02-JAN-2020", "08:00PM");
-        conArr[1] = new Concert("Axiata Arena Bukit Jalil", "22-AUG-2020", "05:00PM");
+        conArr[0] = new Concert("BC One", "Axiata Arena Bukit Jalil", "02-JAN-2020", "08:00PM");
+        conArr[1] = new Concert("BC One","Axiata Arena Bukit Jalil", "22-AUG-2020", "05:00PM");
 
         staffArr[0] = new Staff("S1001", "Manager", "John", "000000-12-0000", "M", "012-3456789");
         staffArr[1] = new Staff("S1002", "Supervisor", "Lewis", "123456-12-0000", "M", "012-3456789");
@@ -35,5 +35,7 @@ public class TestProg {
         tickArr2[1] = new Ticket("P1005", "JayC", false);
         tickArr2[2] = new Ticket("P1005", "JayC", true);
 
+        StaffMenu.staffMainMenu();
+        
     }
 }
