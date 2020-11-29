@@ -10,7 +10,6 @@
  */
 import java.time.LocalTime;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -19,7 +18,7 @@ public class StaffMenu {
     static Performer performerArr[] = new Performer[99];
 
 
-    public static void Menu(){
+    public void Menu(){
 
         System.out.println("1.Add concert ");
         System.out.println("2.Add performer ");
@@ -29,7 +28,7 @@ public class StaffMenu {
 
 }
 
-    public static void Choice(){
+    public void Choice(){
 
         System.out.print("Do you wish to continue?  1-Yes  2-No  : ");
 
@@ -37,7 +36,7 @@ public class StaffMenu {
 
 
 
-    public static void Addconcert(){
+    public void Addconcert(){
 
         Scanner scan = new Scanner(System.in);
         Concert concertArr[] = new Concert[10];
@@ -62,7 +61,7 @@ public class StaffMenu {
 
 }
 
-    public static void Addperformer(){
+    public void Addperformer(){
 
         Scanner scan = new Scanner(System.in);
      
@@ -103,7 +102,7 @@ public class StaffMenu {
         }
 
 
-    public static void addStaff(){
+    public void addStaff(){
 
         Scanner scan = new Scanner(System.in);
         Staff []staffArr = new Staff[99];
@@ -148,11 +147,11 @@ public class StaffMenu {
 
 
 
-    public static void ticketSales(){
+    public void ticketSales(){
 
     }
 
-    public static void Localdt(){
+    public void Localdt(){
 
         LocalDate mydate = LocalDate.now();
         LocalTime mytime = LocalTime.now();
@@ -162,7 +161,7 @@ public class StaffMenu {
 
 
 
-    public static void main(String [] args){
+    public void Staffmenumain(){
 
         Scanner scan = new Scanner(System.in);
 
