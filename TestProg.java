@@ -40,7 +40,7 @@ public class TestProg {
         tickArr[4] = new Ticket("P1005", "Concert 2", false);
         tickArr[5] = new Ticket("P1005", "Concert 2", true);
 
-        StaffMenu.staffMainMenu(tickArr,fnbArr,conArr,staffArr,perfoArr,custoArr);
+        StaffMenu.staffMainMenu(tickArr,fnbArr,conArr,staffArr,perfoArr,custoArr); //run staffmenu
 
     }
 }
