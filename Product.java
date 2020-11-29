@@ -1,24 +1,24 @@
 
 public class Product {
 
-    private String prodID;
+    private String prodId;
     private String prodName;
 
     public Product() {
     }
 
-    public Product(String prodID, String prodName) {
-        this.prodID = prodID;
+    public Product(String prodId, String prodName) {
+        this.prodId = prodId;
         this.prodName = prodName;
 
     }
 
-    public String getProdID() {
-        return prodID;
+    public String getProdId() {
+        return prodId;
     }
 
-    public void setProdID(String prodID) {
-        this.prodID = prodID;
+    public void setProdId(String prodID) {
+        this.prodId = prodID;
     }
 
     public String getProdName() {
@@ -30,7 +30,7 @@ public class Product {
     }
 
     public String toString() {
-        return "Product{" + "prodID=" + prodID + ", prodName=" + prodName + '}';
+        return "Product{" + "prodID=" + prodId + ", prodName=" + prodName + '}';
     }
 
 }

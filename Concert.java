@@ -2,8 +2,8 @@
 public class Concert {
 
     private String venue;
-    private String concertDate;
-    private String concertTime;
+    private String concertDate; // DD-MON-YYYY 
+    private String concertTime; // 12:12pm
 
     public Concert() {
         venue = "Axiata Arena Bukit Jalil";

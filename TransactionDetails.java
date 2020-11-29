@@ -2,7 +2,7 @@
 public class TransactionDetails extends Transaction {
 
     private double totalPrice;
-    private double memberDiscount;
+    private static double memberDiscount = 2.00;
     private double totalPayment; //?
 
     public TransactionDetails() {
@@ -49,4 +49,6 @@ public class TransactionDetails extends Transaction {
         return String.format("%.2f %.2f %.2f", totalPrice, memberDiscount, totalPayment);
     }
 
+    //getGrandTotal?? totalprice-memberdiscount if Transaction.member = true
+    
 }
