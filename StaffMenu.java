@@ -18,7 +18,7 @@ public class StaffMenu {
     static Performer performerArr[] = new Performer[99];
 
 
-    public void Menu(){
+    public static void Menu(){
 
         System.out.println("1.Add concert ");
         System.out.println("2.Add performer ");
@@ -28,7 +28,7 @@ public class StaffMenu {
 
 }
 
-    public void Choice(){
+    public static void Choice(){
 
         System.out.print("Do you wish to continue?  1-Yes  2-No  : ");
 
@@ -36,7 +36,7 @@ public class StaffMenu {
 
 
 
-    public void Addconcert(){
+    public static void Addconcert(){
 
         Scanner scan = new Scanner(System.in);
         Concert concertArr[] = new Concert[10];
@@ -61,7 +61,7 @@ public class StaffMenu {
 
 }
 
-    public void Addperformer(){
+    public static void Addperformer(){
 
         Scanner scan = new Scanner(System.in);
      
@@ -102,7 +102,7 @@ public class StaffMenu {
         }
 
 
-    public void addStaff(){
+    public static void addStaff(){
 
         Scanner scan = new Scanner(System.in);
         Staff []staffArr = new Staff[99];
@@ -147,11 +147,11 @@ public class StaffMenu {
 
 
 
-    public void ticketSales(){
+    public static void ticketSales(){
 
     }
 
-    public void Localdt(){
+    public static void Localdt(){
 
         LocalDate mydate = LocalDate.now();
         LocalTime mytime = LocalTime.now();
@@ -161,7 +161,7 @@ public class StaffMenu {
 
 
 
-    public void Staffmenumain(){
+    public static void Staffmenumain(){
 
         Scanner scan = new Scanner(System.in);
 
