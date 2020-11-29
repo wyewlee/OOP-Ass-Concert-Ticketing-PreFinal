@@ -1,32 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author User
- */
 public class Person {
-    
-    private static String name;
-    private static String ic;
-    private static String gender;
-    private static String contact;
-    
-    public Person(){
-        name = "";
-        ic = "";
-        gender = "";
-        contact = "";
+
+    private String name;
+    private String ic;
+    private String gender;
+    private String contact;
+
+    public Person() {
     }
-    
-     public Person(String name, String ic, String gender, String contact){
-         this.name = name;
-         this.ic = ic;
-         this.gender = gender;
-         this.contact = contact;
+
+    public Person(String name, String ic, String gender, String contact) {
+        this.name = name;
+        this.ic = ic;
+        this.gender = gender;
+        this.contact = contact;
     }
 
     public String getName() {
@@ -63,7 +50,9 @@ public class Person {
 
     @Override
     public String toString() {
-        return  "name=" + name + ", ic=" + ic + ", gender=" + gender + ", contact=" + contact ;
-    }  
-     
+        return "Person{" + "name=" + name + ", ic=" + ic + ", gender=" + gender + ", contact=" + contact + '}';
+    }
+
+
+
 }
