@@ -13,7 +13,7 @@
  */
 public class Customer extends Person{
     
-    private static String customerId;
+    private String customerId;
     private static int customerCount;
 
     public Customer(){
