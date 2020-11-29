@@ -58,22 +58,22 @@ public class StaffMenu {
 
         for (int i = empty; i < endnum; i++) {
             System.out.print("\nName : ");
-            String name = scan.nextLine();//let user input name
+            String name = sc.nextLine();//let user input name
 
             System.out.print("IC No : ");
-            String ic = scan.nextLine();//let user input ic no
+            String ic = sc.nextLine();//let user input ic no
 
             System.out.print("Gender : ");
-            String gender = scan.nextLine();//let user input gender
+            String gender = sc.nextLine();//let user input gender
 
             System.out.print("Contact No : ");
-            String contact = scan.nextLine();//let user input contact number
+            String contact = sc.nextLine();//let user input contact number
 
             System.out.print("Performer ID : ");
-            String id = scan.nextLine();//let user input contact number
+            String id = sc.nextLine();//let user input contact number
 
             System.out.print("Managing Company: ");
-            String managingCompany = scan.nextLine();//let user input company
+            String managingCompany = sc.nextLine();//let user input company
 
             performerArr[i] = new Performer(id, managingCompany,
                     name, ic, gender, contact);
@@ -93,22 +93,22 @@ public class StaffMenu {
 
         for (int i = empty; i < endnum; i++) {
             System.out.print("\nStaff ID : ");
-            String id = scan.nextLine();//let user input name
+            String id = sc.nextLine();//let user input name
 
             System.out.print("Staff Position ： ");
-            String position = scan.nextLine();
+            String position = sc.nextLine();
 
             System.out.print("\nName : ");
-            String name = scan.nextLine();//let user input name
+            String name = sc.nextLine();//let user input name
 
             System.out.print("IC No : ");
-            String ic = scan.nextLine();//let user input ic no
+            String ic = sc.nextLine();//let user input ic no
 
             System.out.print("Gender : ");
-            String gender = scan.nextLine();
+            String gender = sc.nextLine();
 
             System.out.print("Contact No : ");
-            String contact = scan.nextLine();
+            String contact = sc.nextLine();
 
             staffArr[i] = new Staff(id, position, name, ic, gender, contact);
         }
