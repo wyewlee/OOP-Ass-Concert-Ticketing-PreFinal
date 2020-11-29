@@ -14,6 +14,11 @@ public class StaffMenu {
         System.out.println("2.Add performer ");
         System.out.println("3.Add staff ");
         System.out.println("4.List ticket sales details ");
+        //add foodandbeverage
+        //list staff details
+        //list performer details
+        //list concert details 
+        //list product selling
         System.out.println("5.Exit\n");
     }
 
