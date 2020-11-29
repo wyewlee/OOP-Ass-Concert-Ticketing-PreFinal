@@ -2,18 +2,20 @@
 public class FoodAndBeverage extends Product {
 
     private String category;
-    //private int totalAmountSold;
+    private double unitPrice;
 
     public FoodAndBeverage() {
     }
 
-    public FoodAndBeverage(String category) {
+    public FoodAndBeverage(String category, double unitPrice) {
         this.category = category;
+        this.unitPrice = unitPrice;
     }
 
-    public FoodAndBeverage(String prodID, String prodName, String category) {
+    public FoodAndBeverage(String prodID, String prodName, String category, Double unitPrice) {
         super(prodID, prodName);
         this.category = category;
+        this.unitPrice = unitPrice;
     }
 
     public String getCategory() {
@@ -24,9 +26,20 @@ public class FoodAndBeverage extends Product {
         this.category = category;
     }
 
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
     @Override
     public String toString() {
-        return "FoodAndBeverage{" + "category=" + category + '}';
+        return super.toString() +"FoodAndBeverage{" + "category=" + category + ", unitPrice=" + unitPrice + '}';
     }
+
+    
+    
 
 }
