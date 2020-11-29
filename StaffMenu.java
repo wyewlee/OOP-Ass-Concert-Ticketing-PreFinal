@@ -7,9 +7,6 @@ public class StaffMenu {
 
     static Scanner scan = new Scanner(System.in);
     static Scanner sc = new Scanner(System.in);
-    static Performer performerArr[] = new Performer[99];
-    static Concert concertArr[] = new Concert[10];
-    static Staff staffArr[] = new Staff[99];
     static int choice = 0;
 
     public static void menu() {
@@ -24,7 +21,7 @@ public class StaffMenu {
         System.out.print("Do you wish to continue?  1-Yes  2-No  : ");
     }
 
-    public static void addConcert() {
+    public static void addConcert(Concert[] concertArr) {
 
         int empty = ArrCheck.checkArrayNEmpty(concertArr);
         int endnum = empty + 1;
@@ -54,7 +51,7 @@ public class StaffMenu {
         }
     }
 
-    public static void addPerformer() {
+    public static void addPerformer(Performer[] performerArr) {
         int empty = ArrCheck.checkArrayNEmpty(performerArr);
         int endnum = empty + 1;
         //check which N in array is empty
@@ -88,7 +85,7 @@ public class StaffMenu {
         }
     }
 
-    public static void addStaff() {
+    public static void addStaff(Staff[] staffArr) {
 
         int empty = ArrCheck.checkArrayNEmpty(staffArr);
         int endnum = empty + 1;
@@ -131,35 +128,35 @@ public class StaffMenu {
         System.out.println("Welcome User, the date for today is " + mydate + " and the time now is " + mytime);
     }
 
-    public static void staffMainMenu() {
-        int selection = 0;
-        int choice = 0;
-        while (selection != 5) {
-            localDt(); //printLocalTime
-            menu(); //print menu
-            System.out.print("Please enter your selection according to the menu number (1 - 5):  ");
-            try {
+    public static void staffMainMenu(Ticket[] tickArr, FoodAndBeverage[] fnbArr,
+            Concert[] conArr, Staff[] staffArr, Performer[] perfoArr, Customer[] custoArr) {
+        try {
+            int selection = 0;
+            int choice = 0;
+            while (selection != 5) {
+                localDt(); //printLocalTime
+                menu(); //print menu
+                System.out.print("Please enter your selection according to the menu number (1 - 5):  ");
 
                 selection = scan.nextInt();
-
                 switch (selection) {
                     case 1:
                         while (choice != 2) {
-                            addConcert();
+                            addConcert(conArr);
                             choice();
                             choice = scan.nextInt();
                         }
                         break;
                     case 2:
                         while (choice != 2) {
-                            addPerformer();
+                            addPerformer(perfoArr);
                             choice();
                             choice = scan.nextInt();
                         }
                         break;
                     case 3:
                         while (choice != 2) {
-                            addStaff();
+                            addStaff(staffArr);
                             choice();
                             choice = scan.nextInt();
                         }
@@ -174,11 +171,10 @@ public class StaffMenu {
                         System.out.println("Invalid selection");
                         break;
                 }
-            } catch (Exception e) { //handle exception
-                System.out.println("Invalid selection");
-                staffMainMenu();
-                throw e;
             }
+        } catch (Exception e) { //handle exception
+            System.out.println("Invalid selection");
+            throw e;
         }
     }
 }
