@@ -1,17 +1,17 @@
 
 public class Transaction {
-    
-    private static String transID;
-    private static String idCount;
-    private static boolean member;
-    
-    public Transaction(){
+
+    private String transID;
+    private String idCount;
+    private boolean member;
+
+    public Transaction() {
         transID = " ";
         idCount = " ";
         member = false;
     }
-    
-    public Transaction(String transactionID, String countID, boolean member){
+
+    public Transaction(String transactionID, String countID, boolean member) {
         transID = transactionID;
         idCount = countID;
         this.member = member;
@@ -29,24 +29,19 @@ public class Transaction {
         return idCount;
     }
 
-    public void setIdCount(String iDCount) {
-        idCount = iDCount;
+    public void setIdCount(String idCount) {
+        this.idCount = idCount;
     }
 
     public boolean isMember() {
         return member;
     }
 
-    public void setMember(boolean mEmber) {
-        member = mEmber;
+    public void setMember(boolean member) {
+        this.member = member;
     }
-    
-    public String toString(){
+
+    public String toString() {
         return String.format("%s %s %b", transID, idCount, member);
     }
-    
-    public static void main (String[] args) {
-        Transaction trans = new Transaction();
-    }
-    
 }

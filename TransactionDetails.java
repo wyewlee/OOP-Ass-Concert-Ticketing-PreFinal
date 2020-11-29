@@ -1,10 +1,11 @@
 
 public class TransactionDetails extends Transaction {
-    private static double totalPrice;
-    private static double memberDiscount;
-    private static double totalPayment;
-        
-    public TransactionDetails(){
+
+    private double totalPrice;
+    private static double memberDiscount = 2.00;
+    private double totalPayment; //?
+
+    public TransactionDetails() {
         totalPrice = 0.00;
         memberDiscount = 0.00;
         totalPayment = 0.00;
@@ -13,8 +14,8 @@ public class TransactionDetails extends Transaction {
     public TransactionDetails(String transactionID, String countID, boolean member) {
         super(transactionID, countID, member);
     }
-    
-    public TransactionDetails(double priceAmount, double discount, double totalPay){
+
+    public TransactionDetails(double priceAmount, double discount, double totalPay) {
         totalPrice = priceAmount;
         memberDiscount = discount;
         totalPayment = totalPay;
@@ -43,12 +44,11 @@ public class TransactionDetails extends Transaction {
     public void setTotalPayment(double totalPay) {
         totalPayment = totalPay;
     }
-    
-    public String toString(){
+
+    public String toString() {
         return String.format("%.2f %.2f %.2f", totalPrice, memberDiscount, totalPayment);
     }
+
+    //getGrandTotal?? totalprice-memberdiscount if Transaction.member = true
     
-    public static void main(String[]args){
-        TransactionDetails transD = new TransactionDetails();
-    }
 }
