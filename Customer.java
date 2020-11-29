@@ -1,38 +1,24 @@
 
+public class Customer extends Person {
 
+    private String customerId;
+    private static int customerCount = 0;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author User
- */
-public class Customer extends Person{
-    
-    private static String customerId;
-    private static int customerCount;
-
-    public Customer(){
-        customerId = "";
-        customerCount = 0;
+    public Customer() {
+        customerCount++;
     }
-    
+
     public Customer(String name, String ic, String gender, String contact) {
         super(name, ic, gender, contact);
+        customerCount++;
     }
-    
- 
-    public Customer(String customerId, int customerCount, String name, String ic, String gender, String contact) {
+
+    public Customer(String customerId, String name, 
+            String ic, String gender, String contact) {
         super(name, ic, gender, contact);
         this.customerId = customerId;
-        this.customerCount = customerCount;
+        customerCount++;
     }
-    
- 
 
     public String getCustomerId() {
         return customerId;
@@ -47,7 +33,7 @@ public class Customer extends Person{
     }
 
     public void setCustomerCount(int customerCount) {
-        this.customerCount = customerCount;
+        Customer.customerCount = customerCount;
     }
 
     @Override
@@ -55,8 +41,4 @@ public class Customer extends Person{
         return "Customer{" + "customerId=" + customerId + ", customerCount=" + customerCount + '}';
     }
 
-    
-
-    
-    
 }
