@@ -1,3 +1,4 @@
+
 import java.time.LocalTime;
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -137,39 +138,46 @@ public class StaffMenu {
             localDt(); //printLocalTime
             menu(); //print menu
             System.out.print("Please enter your selection according to the menu number (1 - 5):  ");
-            selection = scan.nextInt();
+            try {
 
-            switch (selection) {
-                case 1:
-                    while (choice != 2) {
-                        addConcert();
-                        choice();
-                        choice = scan.nextInt();
-                    }
-                    break;
-                case 2:
-                    while (choice != 2) {
-                        addPerformer();
-                        choice();
-                        choice = scan.nextInt();
-                    }
-                    break;
-                case 3:
-                    while (choice != 2) {
-                        addStaff();
-                        choice();
-                        choice = scan.nextInt();
-                    }
-                    break;
-                case 4:
-                    ticketSales();
-                    break;
-                case 5:
-                    System.out.println("Goodbye");
-                    break;
-                default:
-                    System.out.println("Invalid selection");
-                    break;
+                selection = scan.nextInt();
+
+                switch (selection) {
+                    case 1:
+                        while (choice != 2) {
+                            addConcert();
+                            choice();
+                            choice = scan.nextInt();
+                        }
+                        break;
+                    case 2:
+                        while (choice != 2) {
+                            addPerformer();
+                            choice();
+                            choice = scan.nextInt();
+                        }
+                        break;
+                    case 3:
+                        while (choice != 2) {
+                            addStaff();
+                            choice();
+                            choice = scan.nextInt();
+                        }
+                        break;
+                    case 4:
+                        ticketSales();
+                        break;
+                    case 5:
+                        System.out.println("Goodbye");
+                        break;
+                    default:
+                        System.out.println("Invalid selection");
+                        break;
+                }
+            } catch (Exception e) { //handle exception
+                System.out.println("Invalid selection");
+                staffMainMenu();
+                throw e;
             }
         }
     }
