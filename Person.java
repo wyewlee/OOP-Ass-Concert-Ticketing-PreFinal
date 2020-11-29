@@ -1,28 +1,19 @@
 
-
-
-
 public class Person {
-    
+
     private String name;
     private String ic;
     private String gender;
     private String contact;
 
-    
-    public Person(){
-        name = "";
-        ic = "";
-        gender = "";
-        contact = "";
+    public Person() {
     }
-    
-     public Person(String name, String ic, String gender, String contact){
-         this.name = name;
-         this.ic = ic;
-         this.gender = gender;
-         this.contact = contact;
 
+    public Person(String name, String ic, String gender, String contact) {
+        this.name = name;
+        this.ic = ic;
+        this.gender = gender;
+        this.contact = contact;
     }
 
     public String getName() {
@@ -59,11 +50,9 @@ public class Person {
 
     @Override
     public String toString() {
-                return "\tName : " + name + "\n" +
-                        "\tIc : " + ic + "\n" +
-                        "\tGender : " + gender + "\n" + 
-                        "\tContact : " + contact + "\n";
+        return "Person{" + "name=" + name + ", ic=" + ic + ", gender=" + gender + ", contact=" + contact + '}';
+    }
 
-    }  
-     
+
+
 }

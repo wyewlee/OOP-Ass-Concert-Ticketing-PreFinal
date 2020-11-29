@@ -1,62 +1,48 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author User
- */
-import java.util.Date;
 
 public class Concert {
-    
-    private String name;
-    private Date dateCreated = new Date();
-    protected String venue;
-    
-    public Concert(){
-        name = "";
+
+    private String venue;
+    private String concertDate; // DD-MON-YYYY 
+    private String concertTime; // 12:12pm
+
+    public Concert() {
         venue = "Axiata Arena Bukit Jalil";
     }
-    
-    public Concert(String name, String venue){
-        this.name = name;
+
+    public Concert(String venue, String concertDate, String concertTime) {
         this.venue = venue;
-        this.dateCreated = new Date();
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    
-    
-    
-    public Date getDateCreated() {
-        return dateCreated;
+        this.concertDate = concertDate;
+        this.concertTime = concertTime;
     }
 
     public String getVenue() {
         return venue;
     }
 
-    public void setVenue(String vEnue) {
-        venue = vEnue;
+    public void setVenue(String venue) {
+        this.venue = venue;
     }
-    
+
+    public String getConcertDate() {
+        return concertDate;
+    }
+
+    public void setConcertDate(String concertDate) {
+        this.concertDate = concertDate;
+    }
+
+    public String getConcertTime() {
+        return concertTime;
+    }
+
+    public void setConcertTime(String concertTime) {
+        this.concertTime = concertTime;
+    }
+
     @Override
-    public String toString(){
-        return "\tName : " + name + "\n" +
-                "\tVenue : " + venue + "\n" +
-                "\tDate & Time : " + dateCreated;
+    public String toString() {
+        return "Concert{" + "venue=" + venue + ", concertDate=" + concertDate
+                + ", concertTime=" + concertTime + '}';
     }
-    
-    public static void main(String[]args){
-        
-    }
+
 }

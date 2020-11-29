@@ -237,7 +237,7 @@ public class CustomerMenu {
         } while (select > 3);
     }
 
-    public static void main(String args[]) {
+    public static void main(String args[]) {  //dont do main method under same class
         mainMenu();
     }
 }
