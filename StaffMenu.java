@@ -123,8 +123,17 @@ public class StaffMenu {
         }
     }
 
-    public static void ticketSales() {
-
+    public static void ticketSales(Ticket[] tickArr) {
+        
+        int empty = ArrCheck.checkArrayNEmpty(tickArr);
+        int endnum = empty + 1;
+        
+        System.out.println("========================Ticket Sales Details=========================");
+     
+        for (int i = 0; i < endnum; i++) {
+        System.out.println(tickArr[i].toString());
+    
+        }
     }
 
     public static void localDt() { //print time and date
@@ -167,7 +176,7 @@ public class StaffMenu {
                         }
                         break;
                     case 4:
-                        ticketSales();
+                        ticketSales(tickArr);
                         break;
                     case 5:
                         System.out.println("Goodbye");
