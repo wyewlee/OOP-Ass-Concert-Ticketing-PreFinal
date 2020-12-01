@@ -12,11 +12,13 @@ public class TestProg {
     static Performer perfoArr[] = new Performer[99];
     static Customer custoArr[] = new Customer[99];
 
-    
     public static void main(String args[]) {
 
         conArr[0] = new Concert("BC One", "Axiata Arena Bukit Jalil", "02-JAN-2020", "08:00PM");
-        conArr[1] = new Concert("Concert 2", "Axiata Arena Bukit Jalil", "22-AUG-2020", "05:00PM");
+        conArr[1] = new Concert("Concerto 2", "Axiata Arena Bukit Jalil", "22-AUG-2020", "05:00PM");
+        conArr[2] = new Concert("Concerto 4", "Axiata Arena Bukit Jalil", "12-DEC-2020", "03:00PM");
+        conArr[3] = new Concert("Concertoto 6", "Axiata Arena Bukit Jalil", "21-AUG-2020", "1:00AM");
+        
 
         staffArr[0] = new Staff("S1001", "Manager", "John", "000000-12-0000", "M", "012-3456789");
         staffArr[1] = new Staff("S1002", "Supervisor", "Lewis", "123456-12-0000", "M", "012-3456789");
@@ -34,14 +36,14 @@ public class TestProg {
         fnbArr[3] = new FoodAndBeverage("P1003", "Popcorn + Mineral Water", "Set", 6.00);
 
         tickArr[0] = new Ticket("P1004", "BC One", true);
-        tickArr[1] = new Ticket("P1004", "BC 1One", true);
+        tickArr[1] = new Ticket("P1004", "BC One", true);
         tickArr[2] = new Ticket("P1004", "BC One", false);
         tickArr[3] = new Ticket("P1005", "Concert 2", true);
         tickArr[4] = new Ticket("P1005", "Concert 2", false);
         tickArr[5] = new Ticket("P1005", "Concert 2", true);
 
-        StaffMenu.staffMainMenu(tickArr,fnbArr,conArr,staffArr,perfoArr,custoArr); //run staffmenu
-        customerMenu.menuMain(fnbArr);
-        
+        //StaffMenu.staffMainMenu(tickArr,fnbArr,conArr,staffArr,perfoArr,custoArr); //run staffmenu
+        CustomerMenu.menuMain(fnbArr,conArr,tickArr);
+        //CustomerMenu.listConcert(conArr);
     }
 }

@@ -7,7 +7,6 @@ public class Ticket extends Product {
     private String SeatNo;
     private boolean adultTicket; //check whether adult?
     private double finalPrice; //after discount
-    
 
     public Ticket() {
     }
@@ -70,9 +69,13 @@ public class Ticket extends Product {
         this.finalPrice = finalPrice;
     }
 
+    public double getTICKETPRICE() {
+        return TICKETPRICE;
+    }
+
     @Override
     public String toString() {
-        return super.toString()+"Ticket{" + "TICKETPRICE=" + TICKETPRICE + ", ticketID="
+        return super.toString() + "Ticket{" + "TICKETPRICE=" + TICKETPRICE + ", ticketID="
                 + ticketID + ", SeatNo=" + SeatNo + ", adultTicket="
                 + adultTicket + ", finalPrice=" + finalPrice + '}';
     }
